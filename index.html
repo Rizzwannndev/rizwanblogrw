@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-Rizwan Portfolio</title>
+    <link rel="website icon" href="png.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #081b29;
+    --second-bg-color : #112e42;
+    --text-color : #ededed;
+    --main-color : #00abf0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+}
+.ani h3{
+    font-size: 45px;
+    font-weight: 800;
+    color: var(--bg-color);
+    -webkit-text-stroke: .1vw rgb(44, 55, 66) ;
+    position: relative;
+    text-transform: capitalize;
+}
+.ani h3::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--main-color);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    border-right: 4px solid var(--main-color);
+    -webkit-text-stroke: 0vw var(--main-color) ;
+    animation: animate 3s linear infinite ;
+}
+@keyframes animate {
+    0%, 10% , 100%{
+        width: 0;
+    }
+    70% , 90% {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="ani">
+        <h3 data-text="Blog&nbsp;coming&nbsp;soon!">Blog coming soon!</h3>
+    </div>
+</body>
+</html>
